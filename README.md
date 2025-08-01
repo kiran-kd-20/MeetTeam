@@ -31,12 +31,6 @@ Demonstrate the ability to build a responsive web page showcasing team members w
 - Vanilla JavaScript (for filter functionality)
 
 ---
-📂 team-members-page/
-├── index.html
-└── README.md
-
-
----
 
 ## 🚀 Live Preview
 
@@ -61,4 +55,7 @@ Demonstrate the ability to build a responsive web page showcasing team members w
   
 
 ## 📁 Project Structure
+📂 Team_Membs/
+├── index.html
+└── README.md
 

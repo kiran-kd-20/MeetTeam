@@ -34,7 +34,7 @@ Demonstrate the ability to build a responsive web page showcasing team members w
 
 ## 🚀 Live Preview
 
-[🔗 Live Demo](#) – *Add your Netlify or GitHub Pages link here*
+[🔗 Live Demo](https://meet-team-seven.vercel.app/) – 
 
 ---
 

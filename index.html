@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet Our Team</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <section class="text-center py-12 bg-white shadow">
+    <h1 class="text-4xl font-bold mb-4">Meet Our Team</h1>
+    <p class="max-w-xl mx-auto text-gray-600">We are a team of passionate individuals who love building beautiful and functional digital experiences.</p>
+  </section>
+
+  <div class="text-center mt-10">
+    <label for="roleFilter" class="font-semibold text-lg mr-2">Filter by Role:</label>
+    <select id="roleFilter" class="px-4 py-2 rounded-md shadow-md border border-gray-300 focus:outline-none">
+      <option value="all">All</option>
+      <option value="frontend">Front-End Developer</option>
+      <option value="backend">Back-End Developer</option>
+      <option value="designer">UI/UX Designer</option>
+      <option value="manager">Project Manager</option>
+    </select>
+  </div>
+
+  <section class="py-12 px-6 md:px-12 lg:px-24">
+    <div id="teamGrid" class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+  
+      <div class="team-card" data-role="frontend">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-24 h-24 rounded-full mx-auto border-4 border-pink-500" />
+          <div class="text-center mt-4">
+            <h3 class="text-lg font-bold">Ayesha Khan</h3>
+            <p class="text-sm text-gray-500">Front-End Developer</p>
+            <div class="flex justify-center mt-3 gap-4 text-pink-600">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card" data-role="designer">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-24 h-24 rounded-full mx-auto border-4 border-blue-500" />
+          <div class="text-center mt-4">
+            <h3 class="text-lg font-bold">Ali Raza</h3>
+            <p class="text-sm text-gray-500">UI/UX Designer</p>
+            <div class="flex justify-center mt-3 gap-4 text-blue-600">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card" data-role="manager">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/men/65.jpg" class="w-24 h-24 rounded-full mx-auto border-4 border-green-500" />
+          <div class="text-center mt-4">
+            <h3 class="text-lg font-bold">Hamza Tariq</h3>
+            <p class="text-sm text-gray-500">Project Manager</p>
+            <div class="flex justify-center mt-3 gap-4 text-green-600">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card" data-role="backend">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+          <img src="https://randomuser.me/api/portraits/women/56.jpg" class="w-24 h-24 rounded-full mx-auto border-4 border-purple-500" />
+          <div class="text-center mt-4">
+            <h3 class="text-lg font-bold">Fatima Zahra</h3>
+            <p class="text-sm text-gray-500">Back-End Developer</p>
+            <div class="flex justify-center mt-3 gap-4 text-purple-600">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const filterSelect = document.getElementById("roleFilter");
+    const cards = document.querySelectorAll(".team-card");
+
+    filterSelect.addEventListener("change", function () {
+      const selectedRole = this.value;
+      cards.forEach(card => {
+        const role = card.getAttribute("data-role");
+        if (selectedRole === "all" || selectedRole === role) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
